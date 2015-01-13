@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <base href='/'>
+
+  <title>Brainiac Match-Me | Home</title>
+
+  <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/brainiac.users.controller.js"></script>
+    <script src="js/services/brainiac.users.services.js"></script>
+    <script src="js/config/brainiac.routes.js"></script>
+    <script src="js/config/brainiac.app.js"></script>
+</head>
+
+<body ng-app="brainiacApp" ng-controller="brainiacController">
+
+  <div ng-view></div>
+
+</body>
+</html>

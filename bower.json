@@ -1,0 +1,15 @@
+
+{
+    "name": "Brainiac-matchMe-App",
+    "version": "1.0.1",
+    "description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js",
+    "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "animate.css": "latest",
+        "angular": "latest",
+        "angular-route": "latest",
+        "angular-mocks": "latest"   
+    }
+}
+ 
