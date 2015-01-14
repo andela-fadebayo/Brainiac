@@ -27,6 +27,17 @@ a.active {
     outline: 0;
 }
 
+.navbar-default .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.navbar-brand:hover {
+    font-size: 2.5em;
+}
+
 .btn-xl {
     padding: 20px 40px;
     border-color: #55b131;
@@ -201,7 +212,7 @@ header .intro-text {
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 30px;
+    font-size: 1.875em;
     font-style: italic;
     line-height: 50px;
 }
@@ -210,7 +221,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 700;
     line-height: 50px;
 }
@@ -223,7 +234,8 @@ ul.social-buttons {
 ul.social-buttons li {
   display: inline-block;
   list-style: none;
-  margin-right: 10px;
+  margin-right: 30px;
+  margin-top: 20px;
 }
 
 ul.social-buttons li a {
@@ -250,11 +262,23 @@ ul.social-buttons li a:active {
 
 footer {
   padding: 20px 0;
+  margin-top: 20px;
   text-align: center;
+  border-top: 1px solid #59b535;
+  background-color: #ccc;
 }
 
 footer span.info {
   text-transform: none;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   white-space: pre;
+}
+
+footer span a {
+  color: green;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+  color: green;
 }
