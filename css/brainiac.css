@@ -167,14 +167,14 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default .navbar-brand {
-        font-size: 2.5em;
+        font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
 
     .navbar-brand:hover {
-      font-size: 3em;
+      font-size: 2.5em;
     }
 
     .navbar-default .navbar-nav>.active>a {
@@ -219,10 +219,10 @@ header .intro-text .intro-lead-in {
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2.5em;
-    font-weight: 700;
+    text-transform: none;
+    font-family: 'Stalemate', Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 8em;
+    font-weight: 200;
     line-height: 50px;
 }
 

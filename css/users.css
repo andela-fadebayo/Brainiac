@@ -1,0 +1,16 @@
+/*Brainiac Match-Me Application
+Designed to consume matchMe API 
+Fiyinfoluwa S. Adebayo
+Andela final project (project 7)
+13th January, 2015*/
+
+/*style to overwrite some styles from brainiac.css*/
+
+.navbar {
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-bottom-color: green;
+  background-color: #1f1f1f;
+}
+
