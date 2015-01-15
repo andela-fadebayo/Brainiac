@@ -3,3 +3,31 @@ Designed to consume matchMe API
 Fiyinfoluwa S. Adebayo
 Andela final project (project 7)
 13th January, 2015*/
+
+
+//create services using .factory to perform all API calls
+angular.module('brainiacServices', []).factory('brainiacService', function ($http) {
+
+  //this object holds all the API calls that would be made
+  //reference is made to each key-value pair from the controller
+  var matchMeQuery = {};
+
+  var rawUrl = "https://fiyin-matchme.herokuapp.com/api/users/";
+  
+  matchMeQuery.getUsers = function () {
+
+    return $http.get(rawUrl);
+
+  };
+
+  matchMeQuery.getAUser = function (userInput) {
+
+    var singleUrl = rawUrl + userInput
+
+    return $http.get(singleUrl);
+     
+  };
+
+  return matchMeQuery;
+
+});

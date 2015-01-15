@@ -17,11 +17,21 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
     .when('/about', {
       templateUrl: 'views/about.html',
       controller: 'aboutController'
-    /*})
+    })
 
-    .otherwise({
-      redirectTo: '/home'*/
+    .when('/all-users', {
+      templateUrl: 'all-users.html',
+      controller: 'searchController'
+    })
+
+    .when('/create-profile', {
+      templateUrl: 'create-profile.html',
+      controller: 'createProfileController'
     });
+
+    /*.otherwise({
+      redirectTo: '/home'
+    });*/
 
   /*$urlRouterProvider.otherwise('/home');
 

@@ -6,11 +6,114 @@ Andela final project (project 7)
 
 /*style to overwrite some styles from brainiac.css*/
 
+@font-face {
+  font-family: "cute-header";
+  src: url('../libs/font-awesome/fonts/Stalemate-Regular.ttf') format("opentype");
+}
+
 .navbar {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-bottom-color: green;
-  background-color: #1f1f1f;
+  background-image: url(../img/nav-bg.jpg);
+  background-position: center center;
 }
 
+h2 {
+  font-family: 'cute-header', Arial, sans-serif;
+  font-size: 4em;
+  color: #004000;
+  font-weight: 200;
+}
+
+#search {
+  margin: 10px 10px;
+  padding: 3px;
+  height: 2.5em;
+  font-size: 1.2em;
+  border-radius: .43em;
+  outline: 0;
+  border: 1px solid #777;
+}
+
+#searchSubmit {
+  height: 2.5em;
+  padding: 3px 10px;
+  margin: 10px 10px;
+  font-size: 1.2em;
+  color: #006400;
+  border-radius: .3em;
+  border: 1px solid #004000;
+  background-color: #eee;
+}
+
+.div-h3 {
+  margin-top: 30px;
+}
+
+.div-h3 button {
+  padding: 15px;
+  color: #006400;
+  border-radius: .3em;
+  border: 1px solid #004000;
+  background-color: #eee;
+}
+
+.div-h3 button:hover,
+#searchSubmit:hover {
+  color: #fff;
+  background-color: #006400;
+  outline: 0;
+  box-shadow: 0 0 .25em #00fc00;
+  border: none;
+}
+
+.alert {
+  color: #006400;
+  font-size: 1.5em;
+}
+
+#users-container,
+#single-user-container {
+  border-radius: 1em;
+  padding: 20px;
+  margin: 40px auto;
+}
+
+.all-users {
+  list-style: none;
+  list-style-position: inside;
+  display: inline-block;
+  margin: 15px 15px;
+  padding: 10px 10px;
+  height: 300px;
+  width: 240px;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
+  border-radius: .8em;
+}
+
+.all-users li {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.all-users li img {
+  border-radius: 100%;
+}
+
+.all-users li a {
+  text-decoration: none;
+  color: #006400;
+}
+
+.all-users li a:hover {
+  color: #00a500;
+  text-decoration: underline;
+}
+
+ul li span.users-label {
+  font-weight: bolder;
+}
+
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */

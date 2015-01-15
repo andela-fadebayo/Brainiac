@@ -4,6 +4,11 @@ Fiyinfoluwa S. Adebayo
 Andela final project (project 7)
 13th January, 2015*/
 
+@font-face {
+  font-family: "cute-header";
+  src: url('../libs/font-awesome/fonts/Stalemate-Regular.ttf') format("opentype");
+}
+
 body {
   overflow-x: hidden;
   background-color: #eee;
@@ -220,7 +225,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: none;
-    font-family: 'Stalemate', Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'cute-header', Arial, sans-serif;
     font-size: 8em;
     font-weight: 200;
     line-height: 50px;
