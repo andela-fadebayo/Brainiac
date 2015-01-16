@@ -102,12 +102,14 @@ h2 {
   border-radius: 100%;
 }
 
-.all-users li a {
+.all-users li a,
+.imgInfo a {
   text-decoration: none;
-  color: #006400;
+  color: #008000;
 }
 
-.all-users li a:hover {
+.all-users li a:hover,
+.imgInfo a:hover {
   color: #00a500;
   text-decoration: underline;
 }

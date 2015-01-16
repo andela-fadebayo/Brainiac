@@ -1,3 +1,71 @@
 <h2 class="text-center">Create Profile</h2>
 
 <p class="alert text-center"> {{ alert }} </p>
+
+<div id="profile-form" ng-controller="createProfileController">
+  <form name="createProfile" ng-submit="submitUserProfile(usersCreate)" novalidate>
+    <fieldset id="basicInfo">
+      <legend>Basic Information</legend>
+      <label for="firstName">First Name: </label>
+      <input type="text" id="firstName" placeholder="your first name" ng-model="usersCreate.firstName" required /><br />
+      <label for="lastName">Last Name: </label>
+      <input type="text" id="lastName" placeholder="your last name" ng-model="usersCreate.lastName" required /><br />
+      <label for="sex">Sex: </label>
+      <input type="text" id="sex" placeholder="your gender" ng-model="usersCreate.sex" required /><br />
+      <label for="age">Age: </label>
+      <input type="text" id="age" placeholder="how old are you?" ng-model="usersCreate.age" /><br />
+      <label for="username">Username: </label>
+      <input type="text" id="username" placeholder="your username" ng-model="usersCreate.username" required /><br />
+      <label for="email">Email: </label>
+      <input type="text" id="email" placeholder="your email address" ng-model="usersCreate.email" required /><br />
+      <label for="slogan">Slogan: </label>
+      <input type="text" id="slogan" placeholder="your favourite quote" ng-model="usersCreate.slogan" /><br />
+      <label for="company">Company: </label>
+      <input type="text" id="company" placeholder="where do you work?" ng-model="usersCreate.company" /><br />
+      <label for="state">State: </label>
+      <input type="text" id="state" placeholder="Where do you live?" ng-model="usersCreate.state" /><br />
+      <label for="country">Country: </label>
+      <input type="text" id="country" placeholder="...in which country?" ng-model="usersCreate.country" /><br /><br />
+      <span class="imgInfo">Upload your picture <a href="http://postimg.org/" target="_blank"><em>here </em></a> and paste the <strong>Direct Link</strong> in the input field below:</span><br />
+      <label for="picture">Picture Url: </label>
+      <input type="text" id="picture" placeholder="paste your image url here" ng-model="usersCreate.picture" /><br />
+    </fieldset>
+
+    <fieldset id="general">
+      <legend>General</legend>
+      <label for="interests">Interests: </label>
+      <input type="text" id="interests" placeholder="enter your interests, separated with a comma ','" ng-model="usersCreate.interests" /><br />
+      <label for="likes">Likes: </label>
+      <input type="text" id="likes" placeholder="enter your likes, separated with a comma ','" ng-model="usersCreate.likes" /><br />
+      <label for="dislikes">Dislikes: </label>
+      <input type="text" id="dislikes" placeholder="enter your dislikes, separated with a comma ','" ng-model="usersCreate.dislikes" /><br />
+      <label for="favouriteFoods">Favourite Foods: </label>
+      <input type="text" id="favouriteFoods" placeholder="enter your favourite foods, separated with a comma ','" ng-model="usersCreate.favouriteFoods" /><br />
+    </fieldset>
+
+    <fieldset id="technical">
+      <legend>Technical Competence</legend>
+      <label for="programmingLanguages">Programming Languages: </label>
+      <input type="text" id="programmingLanguages" placeholder="enter the programming languages you know, separated with a comma ','" ng-model="usersCreate.programmingLanguages" /><br />
+      <label for="certificates">Certificates: </label>
+      <input type="text" id="certificates" placeholder="enter the certificates you've acquired, separated with a comma ','" ng-model="usersCreate.certificates" /><br />
+      <label for="accomplishments">Accomplishments: </label>
+      <input type="text" id="accomplishments" placeholder="enter your accomplishments, separated with a comma ','" ng-model="usersCreate.accomplishments" /><br />
+    </fieldset>
+
+    <fieldset id="social">
+      <legend>Social Networks</legend>
+      <label for="facebook">Facebook: </label>
+      <input type="text" id="facebook" placeholder="your facebook username" ng-model="usersCreate.facebook" /><br />
+      <label for="instagram">Instagram: </label>
+      <input type="text" id="instagram" placeholder="your instagram username" ng-model="usersCreate.instagram" /><br />
+      <label for="linkedin">LinkedIn: </label>
+      <input type="text" id="linkedin" placeholder="paste your LinkedIn profile url" ng-model="usersCreate.linkedin" /><br />
+      <label for="twitter">Twitter: </label>
+      <input type="text" id="twitter" placeholder="@handle" ng-model="usersCreate.twitter" /><br />
+    </fieldset>
+
+    <input type="submit" value="Create Profile" class="createButton" ng-disabled="createProfile.$invalid" />
+    <input type="reset" class="createButton" />
+  </form>
+</div>
