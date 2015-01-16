@@ -7,7 +7,7 @@
 
   <div id="users-container">
     <ul class="all-users" ng-repeat="users in allUsers">
-      <li><img src={{pix}}  width="105" height="105"></li>
+      <li><img src="{{ users.picture_male }}"  width="105" height="105"></li>
       <li><span class="users-label">Name:</span> {{ users.first_name }} {{ users.last_name }}</li>
       <li><span class="users-label">Username:</span> {{ users.username }} </li>
       <li><span class="users-label">Sex:</span> {{ users.sex }} </li>

@@ -14,7 +14,7 @@
 
   <div id="single-user-container">
     <ul class="all-users" ng-repeat="oneUser in singleUser">
-      <li><img src={{pix}}  width="105" height="105"></li>
+      <li><img src="{{ oneUser.picture_male }}"  width="105" height="105"></li>
       <li><span class="users-label">Name:</span> {{ oneUser.first_name }} {{ oneUser.last_name }}</li>
       <li><span class="users-label">Username:</span> {{ oneUser.username }} </li>
       <li><span class="users-label">Sex:</span> {{ oneUser.sex }} </li>

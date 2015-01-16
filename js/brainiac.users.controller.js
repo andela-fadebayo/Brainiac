@@ -13,14 +13,12 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
 
     brainiacService.getUsers().success(function (data) {
       console.log("Your users: " + data);
-      $scope.alert = "I'm here again.....here are all your users!";
+      $scope.alert = "I'm here again.....here are all users!";
 
       $scope.allUsers = [];
 
       angular.forEach(data, function (users, index) {
         $scope.allUsers.push(users);
-
-        // $scope.pix = users.picture_male;
       });
     });
   };
@@ -46,8 +44,6 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
 
           angular.forEach(aUser, function (oneUser, index) {
             $scope.singleUser.push(oneUser);
-
-            $scope.pix = oneUser.picture_female;
           });
         }
       });
