@@ -124,3 +124,158 @@ ul li span.users-label {
 }
 
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+
+/*page slide animations using ngAnimate*/
+
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    from    { transform:translateX(0); }
+    to      { transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+/*search page specifics*/
+
+/*.page-search.ng-leave {
+  -webkit-animation:slideInRight 1s both ease-in;
+  -moz-animation:slideInRight 1s both ease-in;
+  animation:slideInRight 1s both ease-in;  
+}*/
+
+
+/*CREATE PROFILE FORM*/
+#profile-form {
+  margin: 0 auto 10px;
+  width: 50em;
+  border: 1px solid #06e106;
+  border-radius: .625em;
+  box-shadow: 0 0 1em #000;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 ); 
+  padding: 2em;
+  overflow: hidden;
+  line-height: 2;
+}
+
+#profile-form ul li {
+  list-style: none;
+  clear: both;
+  margin: 15px 0;
+}
+
+#profile-form ul li span {
+  float: left;
+  margin-left: 15em;
+  display: block;
+  width: 22em;
+}
+
+#profile-form label {
+  display: block;
+  float: left;
+  width: 13em;
+  text-align: right;
+  margin-right: 2em;
+  color: #004000;
+}
+
+#profile-form input.textInput {
+  width: 22em;
+  height: 2.2em;
+  padding: .34em;
+  border-radius: .4em;
+  outline: 0;
+  border: 1px solid #777;
+  color: #004000;
+  margin-bottom: .5em;
+  resize: none;
+  line-height: 1.25;
+  overflow: auto;
+}
+
+#profile-form input.textInput:hover,
+#profile-form input.textInput:focus,
+#profile-form input.textInput:active {
+  border: 1px solid #00a500;
+  background-color: #f4f4f4;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.createButtonSubmit,
+.createButtonReset {
+  display: block;
+  height: 3em;
+  float: left;
+  box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+.createButtonSubmit {
+  width: 10em;
+  margin: 0 2em 0 15em;
+  background-color: #004000;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.createButtonReset {
+  width: 5em;
+  color: #006400;
+}
+
+.createButtonSubmit:hover,
+.createButtonReset:hover {
+  box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+
+.createButtonSubmit:hover {
+  border: 1px solid #fff;
+}
+
+.createButtonReset:hover {
+  border: 1px solid #006400;
+}

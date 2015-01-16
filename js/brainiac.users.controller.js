@@ -9,6 +9,8 @@ var brainiacController = angular.module('brainiacController', ['brainiacServices
 
 brainiacController.controller('searchController', ['$scope', 'brainiacService', function ($scope, brainiacService) {
 
+  $scope.pageClass = 'page-search';
+
   $scope.fetchUsers = function () {
 
     brainiacService.getUsers().success(function (data) {
@@ -54,6 +56,8 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
 }]);
 
 brainiacController.controller('createProfileController', ['$scope', 'brainiacService', '$http', function ($scope, brainiacService, $http) {
+
+  $scope.pageClass = 'page-create-profile';
 
   $scope.alert = "Share your interests, likes and skillset by creating your profile now!";
 
