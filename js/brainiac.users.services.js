@@ -28,6 +28,16 @@ angular.module('brainiacServices', []).factory('brainiacService', function ($htt
      
   };
 
+  matchMeQuery.createUser = function (userObject) {
+
+    return $http({
+      method: 'POST',
+      url: rawUrl,
+      data: $.param(userObject),
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+  };
+
   return matchMeQuery;
 
 });

@@ -74,6 +74,11 @@ h2 {
   font-size: 1.5em;
 }
 
+.status {
+  color: #ff0000;
+  font-size: 1.35em;
+}
+
 #users-container,
 #single-user-container {
   border-radius: 1em;

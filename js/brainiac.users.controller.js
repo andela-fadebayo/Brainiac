@@ -20,18 +20,22 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
       angular.forEach(data, function (users, index) {
         $scope.allUsers.push(users);
 
-        $scope.pix = users.picture_male;
+        // $scope.pix = users.picture_male;
       });
     });
   };
 
   $scope.fetchAUser = function () {
+    var searchInputSmall = $scope.searchInput.toLowerCase();
 
-    if($scope.searchInput === "") {
+    console.log("small letter " + searchInputSmall);
+
+    if(searchInputSmall === "") {
       $scope.alert = "Please enter a username!";
     }
     else {
-      brainiacService.getAUser($scope.searchInput).success(function (aUser) {
+      $scope.alert = "";
+      brainiacService.getAUser(searchInputSmall).success(function (aUser) {
         console.log("i returned a user " + aUser);
         
         if(aUser.status === 404) {
@@ -53,11 +57,24 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
 
 }]);
 
-brainiacController.controller('createProfileController', ['$scope', 'brainiacService', function ($scope, brainiacService) {
+brainiacController.controller('createProfileController', ['$scope', 'brainiacService', '$http', function ($scope, brainiacService, $http) {
 
   $scope.alert = "Share your interests, likes and skillset by creating your profile now!";
 
+  $scope.submitUserProfile = function (userObject) {
+
+    var userObjectInput = userObject
+
+    brainiacService.createUser(userObjectInput)
+    .success(function (data, status) {
+      $scope.statusOutput = "Welcome...your profile has been created!";
+    })
+    .error(function (data, status) {
+      $scope.statusOutput = "An error occured. Check your inputs and try again!"
+    });
+  };
 }]);
+
 
 brainiacController.controller('aboutController', ['$scope', function ($scope) {
   $scope.alert = "Here is a little info about myself...";
