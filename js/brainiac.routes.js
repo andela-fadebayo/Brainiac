@@ -27,6 +27,11 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
     .when('/create-profile', {
       templateUrl: 'create-profile.html',
       controller: 'createProfileController'
+    })
+
+    .when('/view-profile', {
+      templateUrl: 'view-profile.html',
+      controller: 'viewProfileController'
     });
 
     /*.otherwise({

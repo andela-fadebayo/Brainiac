@@ -7,9 +7,21 @@ Andela final project (project 7)
 //create the controller and inject Angular's $scope
 var brainiacController = angular.module('brainiacController', ['brainiacServices']);
 
-brainiacController.controller('searchController', ['$scope', 'brainiacService', function ($scope, brainiacService) {
+brainiacController
+
+.controller('searchController', ['$scope', '$location', 'brainiacService', '$localStorage', '$sessionStorage', function ($scope, $location, brainiacService, $localStorage, $sessionStorage) {
 
   $scope.pageClass = 'page-search';
+
+  
+  $localStorage.person = "Simeon";
+
+  $scope.viewProfile = function () {
+    console.log("'see more' button clicked!");
+    // $scope.names = nameSearch;
+    // $scope.person = "Simeon";
+    $location.path('/view-profile');
+  };
 
   $scope.fetchUsers = function () {
 
@@ -26,7 +38,7 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
   };
 
   $scope.fetchAUser = function () {
-    var searchInputSmall = $scope.searchInput.toLowerCase();
+    var searchInputSmall = $scope.searchInput;
 
     console.log("small letter " + searchInputSmall);
 
@@ -53,9 +65,9 @@ brainiacController.controller('searchController', ['$scope', 'brainiacService', 
   };
 
 
-}]);
+}])
 
-brainiacController.controller('createProfileController', ['$scope', 'brainiacService', '$http', function ($scope, brainiacService, $http) {
+.controller('createProfileController', ['$scope', 'brainiacService', function ($scope, brainiacService) {
 
   $scope.pageClass = 'page-create-profile';
 
@@ -63,7 +75,7 @@ brainiacController.controller('createProfileController', ['$scope', 'brainiacSer
 
   $scope.submitUserProfile = function (userObject) {
 
-    var userObjectInput = userObject
+    var userObjectInput = userObject;
 
     brainiacService.createUser(userObjectInput)
     .success(function (data, status) {
@@ -73,9 +85,23 @@ brainiacController.controller('createProfileController', ['$scope', 'brainiacSer
       $scope.statusOutput = "An error occured. Check your inputs and try again!"
     });
   };
-}]);
+}])
 
-
-brainiacController.controller('aboutController', ['$scope', function ($scope) {
+.controller('aboutController', ['$scope', function ($scope) {
   $scope.alert = "Here is a little info about myself...";
+}])
+
+
+.controller('viewProfileController', ['$scope', 'brainiacService', '$location', '$localStorage', '$sessionStorage', function ($scope, brainiacService, $location, $localStorage, $sessionStorage) {
+  // $scope.names = 'Fiyin Simeon';
+  // $scope.viewProfile = function () {
+  //   console.log("'see more' button clicked!");
+    // $scope.names = nameSearch;
+    $scope.person = $localStorage.person;
+    // $scope.person = "Simeon";
+  //   $location.path('/view-profile');
+  // };
+
+  // brainiacService.getAUser()
 }]);
+

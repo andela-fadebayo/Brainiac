@@ -7,6 +7,7 @@ Andela final project (project 7)
 //create a module for brainiac app and assign it to brainiacApp
 angular.module('brainiacApp', [
   'ngRoute',
+  'ngStorage',
   'ngAnimate', 
   'brainiacServices', 
   'brainiacRoute', 
