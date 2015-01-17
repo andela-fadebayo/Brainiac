@@ -16,9 +16,12 @@ brainiacController
   
   $localStorage.person = "Simeon";
 
-  $scope.viewProfile = function () {
+  $scope.viewProfile = function (namePassed) {
     console.log("'see more' button clicked!");
     // $scope.names = nameSearch;
+    console.log("name passed: " + namePassed);
+
+    $localStorage.names = namePassed;
     // $scope.person = "Simeon";
     $location.path('/view-profile');
   };
@@ -93,7 +96,7 @@ brainiacController
 
 
 .controller('viewProfileController', ['$scope', 'brainiacService', '$location', '$localStorage', '$sessionStorage', function ($scope, brainiacService, $location, $localStorage, $sessionStorage) {
-  // $scope.names = 'Fiyin Simeon';
+  $scope.names = $localStorage.names;
   // $scope.viewProfile = function () {
   //   console.log("'see more' button clicked!");
     // $scope.names = nameSearch;
@@ -101,7 +104,43 @@ brainiacController
     // $scope.person = "Simeon";
   //   $location.path('/view-profile');
   // };
+  
+  brainiacService.getAUser($scope.names).success(function (userData) {
+    console.log("user profile of " + userData);
 
-  // brainiacService.getAUser()
+    $localStorage.myData = userData;
+
+    $scope.firstName = userData.first_name;
+    $scope.lastName = userData.last_name;
+    $scope.slogan = userData.slogan;
+
+
+    // $scope.passedUser = [];
+
+    /*angular.forEach(userData, function (userSpec, index) {
+      $scope.passedUser.push(userSpec);
+    });
+*/
+
+  });
+
+
+/*
+      brainiacService.getAUser(searchInputSmall).success(function (aUser) {
+        console.log("i returned a user " + aUser);
+        
+        if(aUser.status === 404) {
+          $scope.alert = aUser.message;
+        }
+        else {
+          $scope.singleUser = [];
+
+          angular.forEach(aUser, function (oneUser, index) {
+            $scope.singleUser.push(oneUser);
+          });
+        }
+      });
+    }
+  };*/
 }]);
 

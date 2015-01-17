@@ -13,7 +13,7 @@
       <li><span class="users-label">Sex:</span> {{ users.sex }} </li>
       <li><span class="users-label">Quote:</span> {{ users.slogan }} </li>
       <li><span class="users-label">Joined On:<br /></span> {{ users.joined_on | date:"medium" }} </li>
-      <li><a href="" ng-click="viewProfile()"><em>See more...</em></a></li>
+      <li><a href="" ng-click="viewProfile(users.first_name)"><em>See more...</em></a></li>
     </ul>
   </div>
 
