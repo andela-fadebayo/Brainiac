@@ -236,7 +236,8 @@ header .intro-text .intro-heading {
 .about-img {
   float: right;
   border-radius: 100%;
-  box-shadow: 0 0 1.2em #888;
+  box-shadow: 0 0 3em #004000;
+  margin-right: 40px;
 }
 
 .about-alert {
@@ -251,16 +252,35 @@ header .intro-text .intro-heading {
 }
 
 .about-text p {
-  font-size: 1.3em;
-  text-align: left;
+  font-size: 1.2em;
+  text-align: justify;
+  text-indent: 2em;
 }
 
+.about-text p span {
+  color: #004000;
+  font-size: 1.21em;
+}
+
+.about-text p a {
+  text-decoration: none;
+  color: #006400;
+}
+
+.about-text p a:hover {
+  text-decoration: underline;
+  color: #00a500;
+}
 
 /*CONTACT*/
 
 #contact {
   clear: both;
   background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
+}
+
+.contact-text {
+  
 }
 
 ul.social-buttons {
