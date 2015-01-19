@@ -1,12 +1,10 @@
 <h2 class="text-center"> {{ allIndex.first_name }} {{ allIndex.last_name }} Profile</h2>
 <div id="view-profile" ng-controller="viewProfileController">
-  <p class="text-center status"> {{ formStatus }} </p>
   
   <div id="profile-image">
     <img src="{{allIndex.picture_male}}" alt="Profile Image" width="400" height="400"><br /><br />
     <p> {{ allIndex.slogan }} </p>
     <div id="social-info">
-      <!-- <h4>Social Networks</h4> -->
       <i class="fa fa-facebook"></i>{{ allIndex.facebook }}<br />
       <i class="fa fa-twitter"></i>{{ allIndex.twitter }} <br />
       <i class="fa fa-linkedin"></i><a href="{{allIndex.linkedin}}">View LinkedIn profile</a> <br />

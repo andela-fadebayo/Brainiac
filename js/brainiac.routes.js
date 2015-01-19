@@ -4,7 +4,7 @@ Fiyinfoluwa S. Adebayo
 Andela final project (project 7)
 13th January, 2015*/
 
-//configure our routes
+//configure routes
 angular.module('brainiacRoute', []).config(['$routeProvider', function ($routeProvider) {
   
   $routeProvider
@@ -37,24 +37,9 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
     .when('/match-me', {
       templateUrl: 'match-me.html',
       controller: 'matchMeController'
-    });
-
-    /*.otherwise({
-      redirectTo: '/home'
-    });*/
-
-  /*$urlRouterProvider.otherwise('/home');
-
-  $stateProvider
-    .state('home', {
-      url: '/home',
-      templateUrl : 'views/home.html',
-      controller: 'mainController'
     })
 
-    .state('users', {
-      url: '/users',
-      templateUrl : 'views/users.html',
-      controller: 'usersController'
-    });*/
+    .otherwise({
+      redirectTo: '/home'
+    });
 }]);

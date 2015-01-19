@@ -15,21 +15,15 @@ angular.module('brainiacServices', []).factory('brainiacService', function ($htt
   var rawUrl = "https://fiyin-matchme.herokuapp.com/api/users/";
   
   matchMeQuery.getUsers = function () {
-
     return $http.get(rawUrl);
-
   };
 
   matchMeQuery.getAUser = function (userInput) {
-
     var singleUrl = rawUrl + userInput
-
     return $http.get(singleUrl);
-     
   };
 
   matchMeQuery.createUser = function (userObject) {
-
     return $http({
       method: 'POST',
       url: rawUrl,
@@ -39,5 +33,4 @@ angular.module('brainiacServices', []).factory('brainiacService', function ($htt
   };
 
   return matchMeQuery;
-
 });

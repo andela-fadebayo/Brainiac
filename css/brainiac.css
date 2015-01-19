@@ -231,7 +231,12 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+
 /*ABOUT */
+#about {
+  margin: 10px auto;
+  padding: 20px 0;
+}
 
 .about-img {
   float: right;
@@ -248,7 +253,6 @@ header .intro-text .intro-heading {
 .about-text {
   margin: 10px 30px 10px 80px;
   max-width: 600px;
-
 }
 
 .about-text p {
@@ -262,25 +266,29 @@ header .intro-text .intro-heading {
   font-size: 1.21em;
 }
 
-.about-text p a {
+.about-text p a,
+.contact-text p a {
   text-decoration: none;
   color: #006400;
 }
 
-.about-text p a:hover {
+.about-text p a:hover,
+.contact-text p a:hover {
   text-decoration: underline;
   color: #00a500;
 }
 
-/*CONTACT*/
 
+/*CONTACT*/
 #contact {
   clear: both;
   background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
+  margin: 10px auto;
+  padding: 30px;
 }
 
 .contact-text {
-  
+
 }
 
 ul.social-buttons {
