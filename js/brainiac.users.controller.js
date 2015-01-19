@@ -85,6 +85,8 @@ brainiacController
     brainiacService.createUser(userObjectInput)
     .success(function (data, status) {
       $scope.statusOutput = "Welcome...your profile has been created!";
+
+      $location.path('#/view-profile');
     })
     .error(function (data, status) {
       $scope.statusOutput = "An error occured. Check your inputs and try again!"
@@ -108,18 +110,7 @@ brainiacController
   // };
 
     $scope.allIndex = $localStorage.allUsersPassed;
-  
-  brainiacService.getAUser($scope.names).success(function (userData) {
-    console.log("user profile of " + userData);
 
-    $localStorage.myData = userData;
-
-    $scope.firstName = userData.first_name;
-    $scope.lastName = userData.last_name;
-    $scope.slogan = userData.slogan;
-
-
-    // $scope.passedUser = [];
 
     /*angular.forEach(userData, function (userSpec, index) {
       $scope.passedUser.push(userSpec);
