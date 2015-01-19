@@ -72,7 +72,7 @@ brainiacController
 
 }])
 
-.controller('createProfileController', ['$scope', 'brainiacService', function ($scope, brainiacService) {
+.controller('createProfileController', ['$scope', 'brainiacService', '$location', '$localStorage', '$sessionStorage', function ($scope, brainiacService, $location, $localStorage, $sessionStorage) {
 
   $scope.pageClass = 'page-create-profile';
 
@@ -81,12 +81,17 @@ brainiacController
   $scope.submitUserProfile = function (userObject) {
 
     var userObjectInput = userObject;
+    
+    $localStorage.allUsersPassed = userObject;
 
     brainiacService.createUser(userObjectInput)
     .success(function (data, status) {
       $scope.statusOutput = "Welcome...your profile has been created!";
+      
+      $localStorage.statusOutput = "Welcome...your profile has been created!";
 
-      $location.path('#/view-profile');
+
+      $location.path('/view-profile');
     })
     .error(function (data, status) {
       $scope.statusOutput = "An error occured. Check your inputs and try again!"
@@ -109,6 +114,8 @@ brainiacController
   //   $location.path('/view-profile');
   // };
 
+    $scope.formStatus = $localStorage.statusOutput;
+
     $scope.allIndex = $localStorage.allUsersPassed;
 
 
@@ -117,7 +124,7 @@ brainiacController
     });
 */
 
-  });
+  // });
 
 
 /*
@@ -140,9 +147,32 @@ brainiacController
 }])
 
 
-.controller('matchMeController', ['$scope', function ($scope) {
+.controller('matchMeController', ['$scope', 'brainiacService', '$location', '$localStorage', '$sessionStorage', function ($scope, brainiacService, $location, $localStorage, $sessionStorage) {
 
-  $scope.intro = "Welcome to Match-Me Application";
+  $scope.intro = "Welcome to Match-Me Hot Room!";
+
+  brainiacService.getUsers()
+    .success(function (data) {
+      console.log("hello friend, here is all user's data: " + data);
+
+      $scope.alert = "Find your match!!!";
+
+      $scope.allUsers = [];
+
+      angular.forEach(data, function (users, index) {
+        $scope.allUsers.push(users);
+      });
+    })
+    .error(function (errorData) {
+      console.log("An error has occured!");
+    });
+
+    $scope.viewProfile = function (namePassed) {
+
+    $localStorage.allUsersPassed = namePassed;
+    
+    $location.path('/view-profile');
+  };
 
 }]);
 

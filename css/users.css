@@ -37,6 +37,11 @@ h2 {
   border: 1px solid #777;
 }
 
+#search:hover {
+  border: 1px solid #00a500;
+  background-color: #f4f4f4;
+}
+
 #searchSubmit {
   height: 2.5em;
   padding: 3px 10px;
@@ -300,8 +305,13 @@ legend {
   background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
 }
 
+#view-profile ul {
+  list-style: none;
+}
+
 #profile-image {
   float: right;
+  margin-right: 40px;
 }
 
 #profile-image img {

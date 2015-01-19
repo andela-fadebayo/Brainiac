@@ -231,6 +231,25 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+/*ABOUT */
+
+.about-img {
+  border-radius: 100%;
+  box-shadow: 0 0 1.2em #888;
+}
+
+.about-alert {
+  font-style: italic;
+  color: #00a500;
+}
+
+
+/*CONTACT*/
+
+#contact {
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
+}
+
 ul.social-buttons {
   text-align: center;
   margin-bottom: 5px;
