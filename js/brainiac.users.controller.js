@@ -21,7 +21,9 @@ brainiacController
     // $scope.names = nameSearch;
     console.log("name passed: " + namePassed);
 
-    $localStorage.names = namePassed;
+    // $localStorage.names = namePassed;
+
+    $localStorage.allUsersPassed = namePassed;
     // $scope.person = "Simeon";
     $location.path('/view-profile');
   };
@@ -96,7 +98,7 @@ brainiacController
 
 
 .controller('viewProfileController', ['$scope', 'brainiacService', '$location', '$localStorage', '$sessionStorage', function ($scope, brainiacService, $location, $localStorage, $sessionStorage) {
-  $scope.names = $localStorage.names;
+  // $scope.names = $localStorage.names;
   // $scope.viewProfile = function () {
   //   console.log("'see more' button clicked!");
     // $scope.names = nameSearch;
@@ -104,6 +106,8 @@ brainiacController
     // $scope.person = "Simeon";
   //   $location.path('/view-profile');
   // };
+
+    $scope.allIndex = $localStorage.allUsersPassed;
   
   brainiacService.getAUser($scope.names).success(function (userData) {
     console.log("user profile of " + userData);
@@ -142,5 +146,12 @@ brainiacController
       });
     }
   };*/
+}])
+
+
+.controller('matchMeController', ['$scope', function ($scope) {
+
+  $scope.intro = "Welcome to Match-Me Application";
+
 }]);
 

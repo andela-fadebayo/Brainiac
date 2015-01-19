@@ -1,9 +1,13 @@
 <div id="view-profile" ng-controller="viewProfileController">
-  <h2 class="text-center"> {{ firstName }} {{ lastName }} {{ names }} Profile</h2>
+  <h2 class="text-center"> {{ allIndex.first_name }} {{ allIndex.last_name }} {{ names }} Profile</h2>
 
   <p>Welcome from profile view page {{ person }}</p>
 
   <div>
-    <p>Slogan: {{ slogan }} </p>
+    <p> {{ allIndex.slogan }} </p>
+    <p> {{ allIndex.sex }} </p>
+    <p> {{ allIndex.username }} </p>
+    <p> {{ allIndex.age }} </p>
+    <p> {{ allIndex.company }} </p>
   </div>
 </div>

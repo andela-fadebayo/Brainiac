@@ -32,6 +32,11 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
     .when('/view-profile', {
       templateUrl: 'view-profile.html',
       controller: 'viewProfileController'
+    })
+
+    .when('/match-me', {
+      templateUrl: 'match-me.html',
+      controller: 'matchMeController'
     });
 
     /*.otherwise({

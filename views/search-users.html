@@ -20,7 +20,7 @@
       <li><span class="users-label">Sex:</span> {{ oneUser.sex }} </li>
       <li><span class="users-label">Quote:</span> {{ oneUser.slogan }} </li>
       <li><span class="users-label">Joined On:<br /></span> {{ oneUser.joined_on | date:"medium" }} </li>
-      <li><a href=""><em>See more...</em></a></a></li>
+      <li><a href="" ng-click="viewProfile(oneUser)"><em>See more...</em></a></a></li>
     </ul>
   </div>
 </div>
