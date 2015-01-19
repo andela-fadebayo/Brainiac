@@ -234,6 +234,7 @@ header .intro-text .intro-heading {
 /*ABOUT */
 
 .about-img {
+  float: right;
   border-radius: 100%;
   box-shadow: 0 0 1.2em #888;
 }
@@ -243,10 +244,22 @@ header .intro-text .intro-heading {
   color: #00a500;
 }
 
+.about-text {
+  margin: 10px 30px 10px 80px;
+  max-width: 600px;
+
+}
+
+.about-text p {
+  font-size: 1.3em;
+  text-align: left;
+}
+
 
 /*CONTACT*/
 
 #contact {
+  clear: both;
   background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
 }
 
