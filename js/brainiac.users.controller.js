@@ -13,7 +13,7 @@ brainiacController
 
   $scope.viewProfile = function (namePassed) {
     $localStorage.allUsersPassed = namePassed;
-    $location.path('Brainiac/view-profile');
+    $location.path('/view-profile');
   };
 
   $scope.fetchUsers = function () {
@@ -60,7 +60,7 @@ brainiacController
     .success(function (data, status) {
       $scope.statusOutput = "Welcome...your profile has been created!";
       $localStorage.statusOutput = "Welcome...your profile has been created!";
-      $location.path('Brainiac/view-profile');
+      $location.path('/view-profile');
     })
     .error(function (data, status) {
       $scope.statusOutput = "An error occured. Check your inputs and try again!"
@@ -97,6 +97,6 @@ brainiacController
 
     $scope.viewProfile = function (namePassed) {
     $localStorage.allUsersPassed = namePassed;
-    $location.path('Brainiac/view-profile');
+    $location.path('/view-profile');
   };
 }]);

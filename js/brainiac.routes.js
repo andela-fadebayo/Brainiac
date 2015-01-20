@@ -34,7 +34,7 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
       controller: 'viewProfileController'
     })
 
-    .when('Brainiac/match-me', {
+    .when('/match-me', {
       templateUrl: 'match-me.html',
       controller: 'matchMeController'
     })
