@@ -9,37 +9,37 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
   
   $routeProvider
 
-    .when('/search', {
+    .when('Brainiac/search', {
       templateUrl: 'search-users.html',
       controller: 'searchController'
     })
 
-    .when('/about', {
+    .when('Brainiac/about', {
       templateUrl: 'views/about.html',
       controller: 'aboutController'
     })
 
-    .when('/all-users', {
+    .when('Brainiac/all-users', {
       templateUrl: 'all-users.html',
       controller: 'searchController'
     })
 
-    .when('/create-profile', {
+    .when('Brainiac/create-profile', {
       templateUrl: 'create-profile.html',
       controller: 'createProfileController'
     })
 
-    .when('/view-profile', {
+    .when('Brainiac/view-profile', {
       templateUrl: 'view-profile.html',
       controller: 'viewProfileController'
     })
 
-    .when('/match-me', {
+    .when('Brainiac/match-me', {
       templateUrl: 'match-me.html',
       controller: 'matchMeController'
     })
 
     .otherwise({
-      redirectTo: '/home'
+      redirectTo: 'Brainiac/home'
     });
 }]);
