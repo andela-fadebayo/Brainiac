@@ -37,9 +37,5 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
     .when('/match-me', {
       templateUrl: 'match-me.html',
       controller: 'matchMeController'
-    })
-
-    .otherwise({
-      redirectTo: '/home'
     });
 }]);

@@ -242,7 +242,7 @@ header .intro-text .intro-heading {
   float: right;
   border-radius: 100%;
   box-shadow: 0 0 3em #004000;
-  margin-right: 100px;
+  margin-right: 40px;
 }
 
 .about-alert {
@@ -251,7 +251,7 @@ header .intro-text .intro-heading {
 }
 
 .about-text {
-  margin: 10px 30px 10px 80px;
+  margin: 10px 30px 10px 120px;
   max-width: 600px;
 }
 
@@ -336,7 +336,7 @@ footer {
 footer span.info {
   text-transform: none;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  white-space: pre;
+  /*white-space: pre;*/
 }
 
 footer span a {
