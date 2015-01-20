@@ -5,11 +5,12 @@
     <img src="{{allIndex.picture_male}}" alt="Profile Image" style='width:100%;'><br /><br />
     <p> {{ allIndex.slogan }} </p>
     <div id="social-info">
-      <i class="fa fa-facebook"></i>{{ allIndex.facebook }}<br />
-      <i class="fa fa-twitter"></i>{{ allIndex.twitter }} <br />
+      <i class="fa fa-facebook"></i><a href="https://www.facebook.com/{{allIndex.facebook}}">{{ allIndex.facebook }}</a><br />
+      <i class="fa fa-twitter"></i><a href="http://www.twitter.com/{{allIndex.twitter}}">{{ allIndex.twitter }}</a> <br />
       <i class="fa fa-linkedin"></i><a href="{{allIndex.linkedin}}">View LinkedIn profile</a> <br />
-      <i class="fa fa-instagram"></i>{{ allIndex.instagram }} <br />
-  </div>
+      <i class="fa fa-instagram"></i>{{ allIndex.instagram }} <br /><br />
+      <span class="info-list-date">Created Profile On: </span> {{ allIndex.joined_on | date:"medium" }}<br />
+    </div>
   </div>
 
   <div id="basic-info">

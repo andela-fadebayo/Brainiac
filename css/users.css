@@ -284,7 +284,12 @@ legend {
   color: #006400;
   display: inline-block;
   width: 13em;
+}
 
+.info-list-date {
+  color: #006400;
+  font-weight: bolder;
+  width: 9em;
 }
 
 .fa {
