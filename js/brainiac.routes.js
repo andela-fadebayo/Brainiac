@@ -37,5 +37,5 @@ angular.module('brainiacRoute', []).config(['$routeProvider', function ($routePr
     .when('Brainiac/match-me', {
       templateUrl: 'match-me.html',
       controller: 'matchMeController'
-    });
+    })
 }]);
