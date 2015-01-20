@@ -70,7 +70,7 @@ brainiacController
 
 
 .controller('aboutController', ['$scope', function ($scope) {
-  $scope.alert = "Here is a little info about myself...";
+  $scope.alert = "Here's a little about myself...";
 }])
 
 
