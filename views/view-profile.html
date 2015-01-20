@@ -1,0 +1,69 @@
+<h2 class="text-center"> {{ allIndex.first_name }} {{ allIndex.last_name }} Profile</h2>
+<div id="view-profile" ng-controller="viewProfileController">
+  
+  <div id="profile-image">
+    <img src="{{allIndex.picture_male}}" alt="Profile Image" width="400" height="400"><br /><br />
+    <p> {{ allIndex.slogan }} </p>
+    <div id="social-info">
+      <i class="fa fa-facebook"></i>{{ allIndex.facebook }}<br />
+      <i class="fa fa-twitter"></i>{{ allIndex.twitter }} <br />
+      <i class="fa fa-linkedin"></i><a href="{{allIndex.linkedin}}">View LinkedIn profile</a> <br />
+      <i class="fa fa-instagram"></i>{{ allIndex.instagram }} <br />
+  </div>
+  </div>
+
+  <div id="basic-info">
+    <h3>Basic Information</h3>
+    <label class="info-list">First Name</label> {{ allIndex.first_name }}<br />
+    <label class="info-list">Last Name</label> {{ allIndex.last_name }}<br />
+    <label class="info-list">Username</label> {{ allIndex.username }}<br />
+    <label class="info-list">Sex</label> {{ allIndex.sex }}<br />
+    <label class="info-list">Age</label> {{ allIndex.age }}<br />
+    <label class="info-list">Email</label> {{ allIndex.email }}<br />
+    <label class="info-list">Company</label> {{ allIndex.company }} <br />
+    <label class="info-list">State</label> {{ allIndex.state }} <br />
+    <label class="info-list">Country</label> {{ allIndex.country }} <br />
+  </div>
+
+  <div id="general-info">
+    <h3>General</h3>
+    <label class="info-list">Interests</label>
+    <ul ng-repeat="items in allIndex.interests">
+      <li>{{items}}</li>
+    </ul>
+
+    <label class="info-list">Likes</label>
+    <ul ng-repeat="items in allIndex.likes">
+      <li>{{items}}</li>
+    </ul>
+
+    <label class="info-list">Dislikes</label>
+    <ul ng-repeat="items in allIndex.dislikes">
+      <li>{{items}}</li>
+    </ul>
+  
+    <label class="info-list">Favourite Foods</label>
+    <ul ng-repeat="items in allIndex.favourite_foods">
+      <li>{{items}}</li>
+    </ul>
+  </div>
+
+  <div id="technical-info">
+    <h3>Technical Competence</h3>
+    <label class="info-list">Programming Languages</label>
+    <ul ng-repeat="items in allIndex.programming_languages">
+      <li>{{items}}</li>
+    </ul>
+
+    <label class="info-list">Certificates</label>
+    <ul ng-repeat="items in allIndex.certificates">
+      <li>{{items}}</li>
+    </ul>
+
+    <label class="info-list">Accomplishments</label>
+    <ul ng-repeat="items in allIndex.accomplishments">
+      <li>{{items}}</li>
+    </ul>
+  </div>
+
+</div>

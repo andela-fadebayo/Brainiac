@@ -1,0 +1,20 @@
+<div class="text-center">
+  <h2> {{ intro }} </h2>
+
+  <div ng-controller="matchMeController">
+  <p class="alert text-center"> {{ alert }} </p>
+
+  <input type="text" id="search" placeholder="Enter text to search..." ng-model="searchText" />
+
+  <div id="users-container">
+    <ul class="all-users" ng-repeat="users in allUsers | filter:searchText">
+      <li><img src="{{ users.picture_male }}"  width="105" height="105"></li>
+      <li><span class="users-label">Name:</span> {{ users.first_name }} {{ users.last_name }}</li>
+      <li><span class="users-label">Username:</span> {{ users.username }} </li>
+      <li><span class="users-label">Sex:</span> {{ users.sex }} </li>
+      <li><span class="users-label">Quote:</span> {{ users.slogan }} </li>
+      <li><span class="users-label">Joined On:<br /></span> {{ users.joined_on | date:"medium" }} </li>
+      <li><a href="" ng-click="viewProfile(users)"><em>See more...</em></a></li>
+    </ul>
+  </div>
+</div>

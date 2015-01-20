@@ -1,0 +1,18 @@
+{
+  "name": "Brainiac-MatchMe",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SPA for brainiac MEAN project",
+  "devDependencies": {
+    "http-server": "^0.6.1",
+    "bower": "^1.3.1"
+  },
+  "scripts": {
+    
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 4000 -c-1",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update"
+  }
+}

@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h2>Search for Users on Match-Me</h2>
+
+  <input type="text" id="search" placeholder="search for..." ng-model="searchInput" />
+
+  <input type="submit" id="searchSubmit" value="Find User" ng-click="fetchAUser()" />
+</div>
+
+<div ng-controller="searchController">
+  
+  <p class="alert text-center"> {{ alert }} </p>
+
+  <div id="single-user-container">
+    <ul class="all-users" ng-repeat="oneUser in singleUser">
+      <li><img src="{{ oneUser.picture_male }}"  width="105" height="105"></li>
+      <li><span class="users-label">Name:</span> {{ oneUser.first_name }} {{ oneUser.last_name }}</li>
+      <li><span class="users-label">Username:</span> {{ oneUser.username }} </li>
+      <li><span class="users-label">Sex:</span> {{ oneUser.sex }} </li>
+      <li><span class="users-label">Quote:</span> {{ oneUser.slogan }} </li>
+      <li><span class="users-label">Joined On:<br /></span> {{ oneUser.joined_on | date:"medium" }} </li>
+      <li><a href="" ng-click="viewProfile(oneUser)"><em>See more...</em></a></a></li>
+    </ul>
+  </div>
+</div>

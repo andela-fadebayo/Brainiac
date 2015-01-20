@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="brainiacApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brainiac Match-Me. Find people with similar interests and skills as you.">
+  <meta name="author" content="Fiyin Simeon Adebayo">
+  <link rel="shortcut icon" href="img/matchMe.png">
+
+  <title>Brainiac Match-Me | Home</title>
+
+  <!-- Bootstrap Core CSS styles, including CSS reset -->
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.css">
+
+  <!-- my custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/brainiac.css">
+
+  <!-- my custom fonts -->
+  <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+        <!-- Brainiac logo and toggle get grouped together for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button type ="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toogle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">Brainiac</a>
+        </div>
+
+        <!-- collect the nav links and other contents for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="" href="views/users.html#search">Search Users</a></li>
+            <li><a class="page-scroll" href="#about">About</a></li>
+            <li><a class="page-scroll" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>   
+    </nav>
+    
+    <header>
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-heading">
+            Match Me
+          </div>
+          <div class="intro-lead-in">
+            Build your TechSoc profile and find people with common interests and skills
+          </div>
+          <a href="views/users.html#create-profile" class="page-scroll btn btn-xl">Create Profile</a>
+          <a href="views/users.html#match-me" class="page-scroll btn btn-xl">Match Me</a>
+        </div>
+      </div>
+    </header>
+
+
+  <div id="about" ng-controller="aboutController" class="text-center">
+    <h2>About</h2>
+    <p class="about-alert"> {{ alert }} </p>
+
+    <img src="img/fiyin_about.jpg" alt="About Me Picture" class="about-img" width="350", height="405"><br />
+
+    <div class="about-text">
+      <p>
+        Have you ever wonder what it would be like if you had a carbon-copy of yourself? Have you ever felt amazed when you saw an identical twin and you were so confused on who is who? The world is full of unique people, we are all different in our own unique way.....but we are all bound by great invisible cords that we inevitably feel the tension on the cords.
+      </p>
+      <p>
+        Plunge into the great sea of discovery staring you in the face right now....Match-Me makes the world even smaller! Find great people with similar interests, likes, dislikes, favourite foods, technical skills including programming languages and accomplishments. Connect, make friends, share and have fun!
+      </p>
+      <p>
+        I am <span>Fiyin Simeon</span>. I love programming, designing, gadgets, blogging, music and making new friends like you! Click <a href="#socialRedirect">here</a> to connect with me on twitter, facebook and linkedIn.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div id="contact" class="text-center">
+    <h2>Contact</h2>
+    <div class="contact-text">
+      <h4>Office Address</h4>
+      <p><i class="fa fa-briefcase"></i> Lagos, Nigeria.</p>
+      <p><i class="fa fa-mobile"></i> 0815 472 0234</p>
+      <p><i class="fa fa-send"></i> <a href="mailto:fiyinsimeon@gmail.com">fiyinsimeon@gmail.com</a></p>
+      <p><i class="fa fa-github"></i><a href="https://github.com/andela-fadebayo">View My Repo</a></p>
+    </div>
+  </div>
+
+  <div>
+    <ul id="socialRedirect" class="social-buttons">
+        <li><a href="http://www.twitter.com/ceemion"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li><a href="http://www.facebook.com/fiyin.simeon"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><i class="fa fa-linkedin"></i></a>
+        </li>
+    </ul>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div>
+          <span class="info"><a href="http://andela.co">Andela</a>  Match-Me  Project    |    Fiyin  Adebayo    |    &copy; 2015</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- brainiac Javascript and AngularJS scripts -->
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-route/angular-route.js"></script>
+  <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../libs/ngstorage/ngStorage.js"></script>
+  <script src="../libs/angular-animate/angular-animate.js"></script>
+  <script src="js/brainiac.users.controller.js"></script>
+  <script src="../js/brainiac.users.services.js"></script>
+  <script src="js/brainiac.routes.js"></script>
+  <script src="js/brainiac.app.js"></script>
+
+  <!-- my js files for page controlls, styling and effects -->
+  <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
+  <script type="text/javascript" src="js/cbpAnimatedHeader.js"></script>
+  <script type="text/javascript" src="js/fiyin-page-scroll.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+/*Brainiac Match-Me Application
+Designed to consume matchMe API 
+Fiyinfoluwa S. Adebayo
+Andela final project (project 7)
+13th January, 2015*/
+
+/*style to overwrite some styles from brainiac.css*/
+
+@font-face {
+  font-family: "cute-header";
+  src: url('../libs/font-awesome/fonts/Stalemate-Regular.ttf') format("opentype");
+}
+
+.navbar {
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-bottom-color: green;
+  background-image: url(../img/nav-bg.jpg);
+  background-position: center center;
+}
+
+h2 {
+  font-family: 'cute-header', Arial, sans-serif;
+  font-size: 4em;
+  color: #004000;
+  font-weight: 200;
+}
+
+#search {
+  margin: 10px 10px;
+  padding: 3px;
+  height: 2.5em;
+  font-size: 1.2em;
+  border-radius: .43em;
+  outline: 0;
+  border: 1px solid #777;
+}
+
+#search:hover {
+  border: 1px solid #00a500;
+  background-color: #f4f4f4;
+}
+
+#searchSubmit {
+  height: 2.5em;
+  padding: 3px 10px;
+  margin: 10px 10px;
+  font-size: 1.2em;
+  color: #006400;
+  border-radius: .3em;
+  border: 1px solid #004000;
+  background-color: #eee;
+}
+
+.div-h3 {
+  margin-top: 30px;
+}
+
+.div-h3 button {
+  padding: 15px;
+  color: #006400;
+  border-radius: .3em;
+  border: 1px solid #004000;
+  background-color: #eee;
+}
+
+.div-h3 button:hover,
+#searchSubmit:hover {
+  color: #fff;
+  background-color: #006400;
+  outline: 0;
+  box-shadow: 0 0 .25em #00fc00;
+  border: none;
+}
+
+.alert {
+  color: #006400;
+  font-size: 1.5em;
+}
+
+.status {
+  color: #ff0000;
+  font-size: 1.35em;
+}
+
+#users-container,
+#single-user-container {
+  border-radius: 1em;
+  padding: 20px;
+  margin: 40px auto;
+}
+
+.all-users {
+  list-style: none;
+  list-style-position: inside;
+  display: inline-block;
+  margin: 15px 15px;
+  padding: 10px 10px;
+  height: 300px;
+  width: 240px;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
+  border-radius: .8em;
+}
+
+#all-users:hover {
+  box-shadow: 0 0 .53em #006400;
+  border: 1px solid #006400;
+}
+
+.all-users li {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.all-users li img {
+  border-radius: 100%;
+}
+
+.all-users li a,
+.imgInfo a {
+  text-decoration: none;
+  color: #008000;
+}
+
+.all-users li a:hover,
+.imgInfo a:hover {
+  color: #00a500;
+  text-decoration: underline;
+}
+
+ul li span.users-label {
+  font-weight: bolder;
+}
+
+
+/*CREATE PROFILE FORM*/
+#profile-form {
+  margin: 0 auto 10px;
+  width: 50em;
+  border: 1px solid #06e106;
+  border-radius: .625em;
+  box-shadow: 0 0 1em #000;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 ); 
+  padding: 2em;
+  overflow: hidden;
+  line-height: 2;
+}
+
+#profile-form ul li {
+  list-style: none;
+  clear: both;
+  margin: 15px 0;
+}
+
+#profile-form ul li span {
+  float: left;
+  margin-left: 15em;
+  display: block;
+  width: 22em;
+}
+
+#profile-form label {
+  display: block;
+  float: left;
+  width: 13em;
+  text-align: right;
+  margin-right: 2em;
+  color: #004000;
+}
+
+#profile-form input.textInput {
+  width: 22em;
+  height: 2.2em;
+  padding: .34em;
+  border-radius: .4em;
+  outline: 0;
+  border: 1px solid #777;
+  color: #004000;
+  margin-bottom: .5em;
+  resize: none;
+  line-height: 1.25;
+  overflow: auto;
+}
+
+#profile-form input.textInput:hover,
+#profile-form input.textInput:focus,
+#profile-form input.textInput:active {
+  border: 1px solid #00a500;
+  background-color: #f4f4f4;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.createButtonSubmit,
+.createButtonReset {
+  display: block;
+  height: 3em;
+  float: left;
+  box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+.createButtonSubmit {
+  width: 10em;
+  margin: 0 2em 0 15em;
+  background-color: #004000;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.createButtonReset {
+  width: 5em;
+  color: #006400;
+}
+
+.createButtonSubmit:hover,
+.createButtonReset:hover {
+  box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+
+.createButtonSubmit:hover {
+  border: 1px solid #fff;
+}
+
+.createButtonReset:hover {
+  border: 1px solid #006400;
+}
+
+
+/*PROFILE PAGE*/
+
+#view-profile {
+  font-size: 1.2em;
+  line-height: 2;
+  padding: 20px;
+  border: 1px solid #06e106;
+  border-radius: 1.925em;
+  box-shadow: 0 0 1em #000;
+  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=4ecc5200&noise=949294&density=63&opacity=59 );
+}
+
+#view-profile ul {
+  list-style: none;
+}
+
+#profile-image {
+  float: right;
+  margin-right: 40px;
+}
+
+#profile-image img {
+  border-radius: 100%;
+  box-shadow: 0 0 1.2em #888;
+}
+
+#profile-image p {
+  text-align: center;
+  font-style: italic;
+  color: #00a500;
+}
+
+#basic-info,
+#general-info,
+#technical-info,
+#social-info {
+  margin: 50px 0 20px 100px;
+}
+
+#basic-info h4 {
+  color: #004000;
+}
+
+.info-list {
+  font-weight: bolder;
+  color: #006400;
+  display: inline-block;
+  width: 13em;
+
+}
+
+.fa {
+  display: inline-block;
+  width: 2em;
+}
+
+#social-info a {
+  text-decoration: none;
+  color: #008000;
+}
+
+#social-info a:hover {
+  text-decoration: underline;
+  color: #00a500;
+}
